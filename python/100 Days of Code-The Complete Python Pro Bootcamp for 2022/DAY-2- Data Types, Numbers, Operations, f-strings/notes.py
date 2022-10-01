@@ -1,0 +1,8 @@
+print("DAY-1")
+print("-----------------------------------------------------------------------------------------------------------")
+print("hello"[0])
+print(type(12))
+char_num=str(len(input("Whats your name? ")))
+print("Your name has " + char_num + " charecters") 
+a=type(123)
+print(a)
