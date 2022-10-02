@@ -26,5 +26,5 @@ for number in range(0,10):  # same as above
 for number in range(0,10,4):    # this will step 4 times and print
     print(number)
 
-random.shuffle(num)
+random.shuffle(num)     # shuffle() is used to takes a sequence, like a list, and reorganize the order of the items. Note: This method changes the original list, it does not return a new list
 print(num)
