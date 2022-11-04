@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+    <title>Drawing using Canvas Element...</title>
+    <style>
+        body { margin: 20px; }
+        #myCanvas { border:5px solid red; }
+    </style>
+</head>
+<body onload="drawCanvas()" data-rsssl=1>
+    <canvas id="myCanvas" width="500" height="500"> </canvas>
+    <script>
+        function drawCanvas()
+        {
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+            // drawing NO sign
+            context.beginPath();
+            context.fillStyle="#000";
+            context.font='60pt Arial Black';
+            context.fillText('NO', 180, 100);
+            // context.closePath();
+            // drawing circle
+            // context.beginPath();
+            context.strokeStyle='red';
+            context.lineWidth=15;
+            context.arc(250,250,100,0,Math.PI*2,false);
+            context.shadowColor='#999';
+            context.shadowOffsetX=3;
+            context.shadowOffsetY=3;
+            context.shadowBlur=5;
+            context.stroke();
+            // filling circle
+            context.fillStyle="#fff";
+            context.shadowOffsetX=0;
+            context.shadowOffsetY=0;
+            context.shadowBlur=0;
+            context.fill();
+            // context.closePath();
+            // drawing P and cross line
+            // context.beginPath();
+            context.fillStyle="#000";
+            context.font='120pt Arial Black';
+            context.fillText('P',200,310);
+            context.moveTo(173,175);
+            context.lineTo(325,325);
+            context.lineWidth=10;
+            context.stroke();
+            // context.closePath();
+            // drawing PARKING
+            // context.beginPath();
+            context.fillStyle="#000";
+            context.font='55pt Arial Black';
+            context.fillText('PARKING', 60, 450);
+            context.closePath();
+        }
+    </script>
+</body>
+</html>
