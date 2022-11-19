@@ -1,42 +1,41 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration</title>
     <style>
-        table, td{
-            border-style: outset;
+        body{
+            margin:50px;
         }
     </style>
 </head>
 <body>
+    <fieldset style="width: 400px; ;">
+        <legend>Registration Form</legend>
     <form>
-        <table>
-            <label style="text-align: center;">Registration Form</label>
+        <table border="1px" cellpadding="5px">
             <tr>
                 <td><label>First Name</label></td>
-                <td><input type="text"></td>
+                <td><input type="text" placeholder="Enter First Name"></td>
             </tr>
             <tr>
                 <td><label>Last Name</label></td>
-                <td><input type="text"></td>
+                <td><input type="text" placeholder="Enter Last Name"></td>
             </tr>
             <tr>
                 <td>Contact Number</td>
-                <td><input type="number"></td>
+                <td><input type="number" placeholder="Enter Contact Number"></td>
             </tr>
             <tr>
                 <td>Email Id</td>
-                <td><input type="email"></td>
+                <td><input type="email" placeholder="Enter mail id"></td>
             </tr>
             <tr>
                 <td>Website URL</td>
-                <td><input type="url"></td>
+                <td><input type="url" placeholder="Enter site URL"></td>
             </tr>
             <tr>
                 <td>Date of Birth</td>
-                <td><input type="date"></td>
+                <td><input type="date" placeholder="Enter DOB"></td>
             </tr>
             <tr>
                 <td>Abilities to learn new technology</td>
@@ -44,12 +43,13 @@
             </tr>
             <tr>
                 <td>Time of Registration</td>
-                <td><input type="datetime"></td>
+                <td><input type="time"></td>
             </tr>
-            <tr style="column-span: 2;">
-                <td><input type="submit"></td>
+            <tr>
+                <td colspan="2"><input type="submit"></td>
             </tr>
         </table>
     </form>
+</fieldset>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drawing using canvas element...</title>
+    <style>
+        body{margin: 50px;}
+        #myCanvas{border: 10px solid red;}
+    </style>
+</head>
+<body data-rsssl=1>
+    <p>
+        <label for="Insize">Enter thickness of the curve: </label>
+        <input type="range" id="Insize" min="1" max="25"/> <br>
+        <label for="Incolor">Select the color: </label> 
+        <input type="color" id="Incolor"/> <br>
+        <button id="draw" onclick="drawCanvas()">Draw</button>
+    </p>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        function drawCanvas(){
+            var csize=document.getElementById("Insize").value;
+            var ccolor=document.getElementById("Incolor").value;
+            var canvas=document.getElementById("myCanvas");
+            var context=canvas.getContext("2d");
+            context.clearRect(0,0,canvas.width,canvas.height);
+            // drawing quadratic curve
+            context.beginPath();
+            context.strokeStyle=ccolor;
+            context.lineWidth=csize;
+            context.moveTo(50,50);
+            context.quadraticCurveTo(50,200,300,50);
+            context.shadowColor="#999";
+            context.shadowOffsetX=3;
+            context.shadowOffsetY=3;
+            context.shadowBlur=5;
+            context.stroke();
+            context.closePath();
+            // drawing bezier curve
+            context.beginPath();
+            context.strokeStyle=ccolor;
+            context.lineWidth=csize;
+            context.moveTo(50,250);
+            context.bezierCurveTo(50,350,450,450,400,250,50);
+            context.shadowColor="#999";
+            context.shadowOffsetX=3;
+            context.shadowOffsetY=3;
+            context.shadowBlur=5;
+            context.stroke();
+            context.closePath();
+        }
+    </script>
+</body>
+</html>
+
