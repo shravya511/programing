@@ -1,6 +1,6 @@
 class Rectangle:
     def __init__(self):
-        self.rectangle=0
+        self.rect_area=0
         self.rect_peri=0
         self.l=0
         self.w=0
