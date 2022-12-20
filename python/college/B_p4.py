@@ -16,7 +16,7 @@ def sequence_found(text):
 
 
 def z_found(text1):
-    res = re.findall(r'\w*z', text1)
+    res = re.findall(r'\w*z\w*,\w*Z\w*', text1)
     if (len(res) == 0):
         print("No Match found")
     else:
@@ -25,7 +25,7 @@ def z_found(text1):
 
 
 def specialchar_found(text1):
-    patterns = '^[a-zA-z0-9]*$'
+    patterns = '^[a-zA-z0-9_]*$'
     if re.search(patterns, text1):
         print("Found a Match!!")
     else:
